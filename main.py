@@ -11,7 +11,7 @@ cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1920)
 cam.set(cv2.CAP_PROP_FPS, 10)
 
 num_pics = 50
-bounce_time = 0.150
+bounce_time = 0.100
 
 def take_picture_with_camera():
     ret, image = cam.read()
@@ -24,12 +24,11 @@ button = Button(2, bounce_time=bounce_time)
 button.when_released = take_picture_with_camera
 
 def run():
+    dir_path = './scans/'
     count = 0
     print('Ready!')
     while count < num_pics:
-        dir_path = './scans/'
         count = len(fnmatch.filter(os.listdir(dir_path), '*.*'))
-        print('Count:', count)
         pass
     cam.release()
 
