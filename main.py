@@ -5,10 +5,9 @@ import fnmatch
 import os
 
 cam = cv2.VideoCapture(0)
-cam.set(cv2.CAP_PROP_FRAME_WIDTH, 1080)
-cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1920)
-cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 1920)
-cam.set(cv2.CAP_PROP_FPS, 10)
+cam.set(cv2.CAP_PROP_FRAME_WIDTH, 540)
+cam.set(cv2.CAP_PROP_FRAME_HEIGHT, 960)
+cam.set(cv2.CAP_PROP_FPS, 12)
 
 num_pics = 50
 bounce_time = 0.075
